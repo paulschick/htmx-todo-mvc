@@ -9,9 +9,8 @@
     <link rel="icon" type="image/x-icon" title="icon" href="favicon.ico">
     <title>HTMX - esbuild - Fastify - TypeScript - TSX</title>
 </head>
-<body>
-    <h1 class="custom-heading">Hello From Fastify/esbuild/TypeScript/Tsx Todo!</h1>
-    <div hx-get="/hello" hx-trigger="load"></div>
+<body class="bg-gray-100">
     <script src="htmx.min.js"></script>
+    <div hx-get="/main" hx-trigger="load"></div>
 </body>
 </html>

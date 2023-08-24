@@ -1,8 +1,8 @@
-import { HelloWorld } from './HelloWorld';
 import ReactDOMServer from 'react-dom/server';
 import Fastify from 'fastify';
 import * as path from 'path';
 import { createTables, registerDatabase } from './registerDatabase.mjs';
+import {MainContainer} from "./MainContainer";
 
 async function main() {
     const fastify = Fastify({
@@ -21,8 +21,8 @@ async function main() {
         res.sendFile('index.html');
     });
 
-    fastify.get('/hello', async (req, res) => {
-        return ReactDOMServer.renderToString(HelloWorld());
+    fastify.get('/main', async (req, res) => {
+        return ReactDOMServer.renderToString(MainContainer());
     });
 
     await fastify.ready();
